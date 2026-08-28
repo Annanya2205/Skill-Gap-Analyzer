@@ -1,0 +1,95 @@
+/* Custom styles for application components */
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 140px;
+}
+
+.dashboard-card-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsl(var(--text-secondary));
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-card-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  font-family: var(--font-display);
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-card-subtext {
+  font-size: 0.8rem;
+  color: hsl(var(--text-muted));
+}
+
+.dashboard-row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border-glass);
+  background: rgba(13, 20, 38, 0.4);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: hsl(var(--text-secondary));
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0.25rem 0.5rem;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: hsl(var(--text-primary));
+  border-bottom-color: hsl(var(--primary));
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
